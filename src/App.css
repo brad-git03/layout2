@@ -10,6 +10,9 @@ body {
   justify-content: center;
   align-items: center;
   background: #111; /* dark background */
+  font-size: 45px;
+  font-family: sans-serif;
+  color:white;
 }
 
 .container {
@@ -24,9 +27,9 @@ body {
   gap: 20px;
 }
 
-/* Section Style */
-.section {
-  flex: 1;  /* make each section expand */
+/* ================= TOP SECTION ================= */
+.TopSection {
+  flex: 1;
   border: 5px solid blue;
   padding: 10px;
   display: flex;
@@ -35,7 +38,7 @@ body {
   background: #cceeff;
 }
 
-.box {
+.TopBox {
   flex: 1;
   background: peachpuff;
   border: 5px solid salmon;
@@ -44,58 +47,71 @@ body {
   align-items: center;
 }
 
-/* Top row with nested red boxes */
-.peach-box {
+.TopPeachBox {
   flex: 1;
   background: peachpuff;
   border: 5px solid salmon;
-  display: flex;
+  display: flex;                /* flex to hold inner boxes */
   justify-content: center;
+  align-items: center;
+  gap: 10px;                    /* space between Bradley & Manalese */
   padding: 10px;
 }
 
-.red-group-box {
-  display: flex;
-  gap: 2px;
-  background: red;
-  border: 2px solid red;
-  flex: 1;
-  justify-content: space-between;
-}
-.red-group-box .inner-box {
+.TopInnerBox {
   flex: 1;
   border: 5px solid red;
   background: lightpink;
-  padding: 10px;
+  padding: 60px;
+
+  display: flex;
+  justify-content: center;      /* center text horizontally */
+  align-items: center;          /* center text vertically */
+  font-weight: bold;
 }
 
-/* Middle Section */
+.TopInnerBox p {
+  margin: 0;
+  flex: 1;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* ================= MIDDLE SECTION ================= */
 .middle-box {
   flex: 2;
   display: flex;
   gap: 10px;
 }
 
-.middle-box .left {
+.MiddleLeft {
   flex: 2;
   background: lightpink;
   border: 5px solid brown;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.middle-box .right {
+.MiddleRight {
   flex: 2;
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
-.middle-box .right div {
+.MiddleRightBox {
   flex: 1;
   background: lightpink;
   border: 5px solid brown;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-/* Bottom Section */
+/* ================= BOTTOM SECTION ================= */
 .bottom-box {
   flex: 1;
   border: 5px solid blue;
@@ -105,20 +121,28 @@ body {
   background: #cceeff;
 }
 
-.bottom-box .side {
+.BottomSide {
   flex: 1;
   border: 5px solid rgb(96, 96, 126);
   background: lavender;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.bottom-box .center {
+.BottomCenter {
   flex: 2;
   display: flex;
   gap: 10px;
 }
 
-.bottom-box .center div {
+.BottomCenterBox {
   flex: 1;
   border: 5px solid salmon;
   background: peachpuff;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

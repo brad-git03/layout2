@@ -1,38 +1,96 @@
 import './App.css'
 
+// ================= TOP SECTION =================
+function TopBox(props) {
+  return <div className="TopBox">{props.text}</div>;
+}
+
+function TopInnerBox(props) {
+  return <div className="TopInnerBox">{props.name}</div>;
+}
+
+function TopPeachBox() {
+  return (
+    <div className="TopPeachBox">
+      <TopInnerBox name="Bradley" />
+      <TopInnerBox name="Manalese" />
+    </div>
+  );
+}
+
+function TopSection() {
+  return (
+    <div className="TopSection">
+      <TopBox/>
+      <TopPeachBox />
+      <TopBox/>
+    </div>
+  );
+}
+
+
+// ================= MIDDLE SECTION =================
+function MiddleLeft(props) {
+  return <div className="MiddleLeft">{props.text}</div>;
+}
+
+function MiddleRightBox(props) {
+  return <div className="MiddleRightBox">{props.text}</div>;
+}
+
+function MiddleRight() {
+  return (
+    <div className="MiddleRight">
+      <MiddleRightBox/>
+      <MiddleRightBox/>
+    </div>
+  );
+}
+
+function MiddleSection() {
+  return (
+    <div className="middle-box">
+      <MiddleLeft/>
+      <MiddleRight />
+    </div>
+  );
+}
+
+// ================= BOTTOM SECTION =================
+function BottomSide(props) {
+  return <div className="BottomSide">{props.text}</div>;
+}
+
+function BottomCenterBox(props) {
+  return <div className="BottomCenterBox">{props.text}</div>;
+}
+
+function BottomCenter() {
+  return (
+    <div className="BottomCenter">
+      <BottomCenterBox text="C-PCIT9" />
+      <BottomCenterBox text="IT3B" />
+    </div>
+  );
+}
+
+function BottomSection() {
+  return (
+    <div className="bottom-box">
+      <BottomSide/>
+      <BottomCenter />
+      <BottomSide/>
+    </div>
+  );
+}
+
+// ================= APP =================
 function App() {
   return (
     <div className="container">
-      {/* Top Section */}
-      <div className="section">
-        <div className="box"></div>
-        <div className="peach-box">
-          <div className="red-group-box">
-            <div className="inner-box"></div>
-            <div className="inner-box"></div>
-          </div>
-        </div>
-        <div className="box"></div>
-      </div>
-
-      {/* Middle Section */}
-      <div className="middle-box">
-        <div className="left"></div>
-        <div className="right">
-          <div></div>
-          <div></div>
-        </div>
-      </div>
-
-      {/* Bottom Section */}
-      <div className="bottom-box">
-        <div className="side"></div>
-        <div className="center">
-          <div></div>
-          <div></div>
-        </div>
-        <div className="side"></div>
-      </div>
+      <TopSection />
+      <MiddleSection />
+      <BottomSection />
     </div>
   );
 }
